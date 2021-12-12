@@ -46,7 +46,7 @@ def check_row(board, row, sign):
 def check_winner(board, sign):
     global ROWS, COLUMNS
     for row in range(ROWS):
-        check_row(board, row + 1, 'X')
+        check_row(board, row + 1, sign)
 
 
 if __name__ == '__main__':
@@ -56,6 +56,7 @@ if __name__ == '__main__':
     update_board(game_board, 0, 'X')
     update_board(game_board, 1, 'X')
     update_board(game_board, 2, 'X')
+    print(game_board)
     display_board(game_board)
     check_winner(game_board, 'X')
 
